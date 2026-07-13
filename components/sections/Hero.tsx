@@ -12,10 +12,43 @@ export default function Hero() {
       id="home"
       className="relative flex min-h-[100svh] flex-col overflow-hidden pt-20 sm:pt-28"
     >
+      {/* Portrait — cutout, anchored to the bottom-right, sitting BEHIND the
+          text as a depth layer. Flush to the bottom edge on every size. */}
+      <motion.div
+        className="pointer-events-none absolute bottom-0 right-0 z-0 h-[66svh] w-[86%] max-w-[23rem] xs:h-[68svh] sm:w-[70%] sm:max-w-[26rem] lg:right-[max(1.5rem,calc((100vw-1600px)/2+3rem))] lg:h-[86vh] lg:w-[40vw] lg:max-w-[600px]"
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.5, duration: 1.1, ease: [0.16, 1, 0.3, 1] }}
+      >
+        <div
+          aria-hidden
+          className="absolute inset-x-6 bottom-1 h-5 rounded-[100%] bg-graphite/25 blur-lg sm:h-6 sm:blur-xl"
+        />
+        <Image
+          src={profile.image}
+          alt={profile.imageAlt}
+          fill
+          priority
+          sizes="(max-width: 1024px) 80vw, 40vw"
+          className="object-contain object-bottom drop-shadow-[0_24px_36px_rgba(22,19,15,0.25)]"
+        />
+      </motion.div>
+
+      {/* Ivory scrim — keeps the layered text readable over the portrait on
+          smaller screens; the image stays visible on the right. */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 z-[5] lg:hidden"
+        style={{
+          background:
+            "linear-gradient(to right, #f3eee3 0%, rgba(243,238,227,0.72) 42%, rgba(243,238,227,0) 78%)",
+        }}
+      />
+
       {/* 3D perspective ground line the figure stands on */}
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-x-0 bottom-0 z-0 [perspective:700px]"
+        className="pointer-events-none absolute inset-x-0 bottom-0 z-[6] [perspective:700px]"
       >
         <div
           className="mx-auto h-40 w-[92%] max-w-6xl border-t border-graphite/25"
@@ -26,10 +59,10 @@ export default function Hero() {
               "linear-gradient(to top, rgba(198,58,36,0.10), transparent 70%)",
           }}
         />
-        <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-graphite/35 to-transparent" />
+        <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-graphite/40 to-transparent" />
       </div>
 
-      <div className="shell relative z-10 flex flex-1 flex-col lg:grid lg:grid-cols-12 lg:items-center lg:gap-6">
+      <div className="shell relative z-10 flex flex-1 flex-col justify-start lg:grid lg:grid-cols-12 lg:items-center lg:gap-6">
         {/* Text block */}
         <div className="relative z-10 shrink-0 lg:col-span-7">
           <motion.p
@@ -62,7 +95,7 @@ export default function Hero() {
           </h1>
 
           <motion.p
-            className="mt-4 max-w-md font-display text-lg italic text-graphite/70 sm:mt-7 sm:text-2xl"
+            className="mt-4 max-w-[15rem] font-display text-lg italic text-graphite/70 sm:mt-7 sm:max-w-md sm:text-2xl"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.9, duration: 0.9 }}
@@ -71,7 +104,7 @@ export default function Hero() {
           </motion.p>
 
           <motion.div
-            className="mt-5 flex flex-wrap items-center gap-2.5 sm:mt-9 sm:gap-3"
+            className="mt-5 flex flex-col items-start gap-2.5 sm:mt-9 sm:flex-row sm:flex-wrap sm:items-center sm:gap-3"
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.05, duration: 0.7 }}
@@ -85,7 +118,7 @@ export default function Hero() {
             </a>
             <a
               href="#about"
-              className="inline-flex items-center gap-2 rounded-full border border-graphite/25 px-5 py-2.5 font-mono text-[0.7rem] uppercase tracking-label text-graphite transition-colors hover:border-graphite hover:bg-graphite hover:text-ivory sm:px-6 sm:py-3 sm:text-xs"
+              className="inline-flex items-center gap-2 rounded-full border border-graphite/25 bg-ivory/60 px-5 py-2.5 font-mono text-[0.7rem] uppercase tracking-label text-graphite backdrop-blur-sm transition-colors hover:border-graphite hover:bg-graphite hover:text-ivory sm:bg-transparent sm:px-6 sm:py-3 sm:text-xs"
             >
               About Rakesh
             </a>
@@ -125,30 +158,8 @@ export default function Hero() {
           </motion.dl>
         </div>
 
-        {/* Portrait — flexes to fill the remaining first-view height on mobile,
-            absolutely anchored to the bottom-right on desktop. Cutout, no box. */}
-        <div className="relative flex min-h-0 flex-1 items-end justify-center lg:col-span-5 lg:block lg:flex-none">
-          <motion.div
-            className="relative h-full max-h-[52vh] w-full max-w-[15rem] xs:max-w-[17rem] sm:max-h-[58vh] sm:max-w-[20rem] lg:absolute lg:bottom-0 lg:right-[max(1.5rem,calc((100vw-1600px)/2+3rem))] lg:max-h-none lg:h-[86vh] lg:w-[40vw] lg:max-w-[600px]"
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5, duration: 1.1, ease: [0.16, 1, 0.3, 1] }}
-          >
-            {/* soft grounding shadow under the figure */}
-            <div
-              aria-hidden
-              className="absolute inset-x-6 bottom-1 h-5 rounded-[100%] bg-graphite/25 blur-lg sm:h-6 sm:blur-xl"
-            />
-            <Image
-              src={profile.image}
-              alt={profile.imageAlt}
-              fill
-              priority
-              sizes="(max-width: 1024px) 70vw, 40vw"
-              className="object-contain object-bottom drop-shadow-[0_24px_36px_rgba(22,19,15,0.25)]"
-            />
-          </motion.div>
-        </div>
+        {/* right column spacer on desktop (portrait is absolute) */}
+        <div className="hidden lg:col-span-5 lg:block" aria-hidden />
       </div>
 
       {/* Scroll indicator — desktop only */}
