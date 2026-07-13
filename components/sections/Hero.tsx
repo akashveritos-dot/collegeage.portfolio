@@ -10,7 +10,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative flex min-h-[100svh] flex-col overflow-hidden pt-24 sm:pt-28"
+      className="relative flex min-h-[100svh] flex-col overflow-hidden pt-20 sm:pt-28"
     >
       {/* 3D perspective ground line the figure stands on */}
       <div
@@ -29,11 +29,11 @@ export default function Hero() {
         <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-graphite/35 to-transparent" />
       </div>
 
-      <div className="shell relative z-10 grid flex-1 grid-cols-1 items-center gap-6 lg:grid-cols-12">
-        {/* Left — text block */}
-        <div className="relative z-10 lg:col-span-7">
+      <div className="shell relative z-10 flex flex-1 flex-col lg:grid lg:grid-cols-12 lg:items-center lg:gap-6">
+        {/* Text block */}
+        <div className="relative z-10 shrink-0 lg:col-span-7">
           <motion.p
-            className="label mb-6 flex items-center gap-3"
+            className="label mb-3 flex items-center gap-3 sm:mb-6"
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.7 }}
@@ -62,7 +62,7 @@ export default function Hero() {
           </h1>
 
           <motion.p
-            className="mt-7 max-w-md font-display text-xl italic text-graphite/70 sm:text-2xl"
+            className="mt-4 max-w-md font-display text-lg italic text-graphite/70 sm:mt-7 sm:text-2xl"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.9, duration: 0.9 }}
@@ -71,35 +71,35 @@ export default function Hero() {
           </motion.p>
 
           <motion.div
-            className="mt-9 flex flex-wrap items-center gap-3"
+            className="mt-5 flex flex-wrap items-center gap-2.5 sm:mt-9 sm:gap-3"
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.05, duration: 0.7 }}
           >
             <a
               href="#work"
-              className="group inline-flex items-center gap-2 rounded-full bg-graphite px-6 py-3 font-mono text-xs uppercase tracking-label text-ivory transition-colors hover:bg-reel"
+              className="group inline-flex items-center gap-2 rounded-full bg-graphite px-5 py-2.5 font-mono text-[0.7rem] uppercase tracking-label text-ivory transition-colors hover:bg-reel sm:px-6 sm:py-3 sm:text-xs"
             >
               View Selected Work
               <span aria-hidden className="transition-transform group-hover:translate-x-1">→</span>
             </a>
             <a
               href="#about"
-              className="inline-flex items-center gap-2 rounded-full border border-graphite/25 px-6 py-3 font-mono text-xs uppercase tracking-label text-graphite transition-colors hover:border-graphite hover:bg-graphite hover:text-ivory"
+              className="inline-flex items-center gap-2 rounded-full border border-graphite/25 px-5 py-2.5 font-mono text-[0.7rem] uppercase tracking-label text-graphite transition-colors hover:border-graphite hover:bg-graphite hover:text-ivory sm:px-6 sm:py-3 sm:text-xs"
             >
               About Rakesh
             </a>
             <a
               href="#contact"
-              className="link-underline font-mono text-xs uppercase tracking-label text-graphite/70"
+              className="link-underline hidden font-mono text-xs uppercase tracking-label text-graphite/70 sm:inline"
             >
               Get in Touch
             </a>
           </motion.div>
 
-          {/* selected credits strip */}
+          {/* selected credits strip — desktop only (keeps mobile first-view clean) */}
           <motion.dl
-            className="mt-12 flex flex-wrap gap-x-10 gap-y-4 border-t border-graphite/15 pt-6"
+            className="mt-12 hidden flex-wrap gap-x-10 gap-y-4 border-t border-graphite/15 pt-6 lg:flex"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.2, duration: 0.8 }}
@@ -125,37 +125,37 @@ export default function Hero() {
           </motion.dl>
         </div>
 
-        {/* Right — spacer on desktop (portrait is absolute below) */}
-        <div className="hidden lg:col-span-5 lg:block" aria-hidden />
+        {/* Portrait — flexes to fill the remaining first-view height on mobile,
+            absolutely anchored to the bottom-right on desktop. Cutout, no box. */}
+        <div className="relative flex min-h-0 flex-1 items-end justify-center lg:col-span-5 lg:block lg:flex-none">
+          <motion.div
+            className="relative h-full max-h-[52vh] w-full max-w-[15rem] xs:max-w-[17rem] sm:max-h-[58vh] sm:max-w-[20rem] lg:absolute lg:bottom-0 lg:right-[max(1.5rem,calc((100vw-1600px)/2+3rem))] lg:max-h-none lg:h-[86vh] lg:w-[40vw] lg:max-w-[600px]"
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5, duration: 1.1, ease: [0.16, 1, 0.3, 1] }}
+          >
+            {/* soft grounding shadow under the figure */}
+            <div
+              aria-hidden
+              className="absolute inset-x-6 bottom-1 h-5 rounded-[100%] bg-graphite/25 blur-lg sm:h-6 sm:blur-xl"
+            />
+            <Image
+              src={profile.image}
+              alt={profile.imageAlt}
+              fill
+              priority
+              sizes="(max-width: 1024px) 70vw, 40vw"
+              className="object-contain object-bottom drop-shadow-[0_24px_36px_rgba(22,19,15,0.25)]"
+            />
+          </motion.div>
+        </div>
       </div>
 
-      {/* Portrait — cutout, no box, flush to the bottom edge */}
-      <motion.div
-        className="pointer-events-none relative z-[5] mx-auto mt-6 h-[44vh] w-full max-w-[19rem] self-center sm:h-[50vh] sm:max-w-[22rem] lg:absolute lg:bottom-0 lg:right-[max(1.5rem,calc((100vw-1600px)/2+3rem))] lg:mx-0 lg:mt-0 lg:h-[86vh] lg:w-[40vw] lg:max-w-[600px] lg:self-auto"
-        initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.5, duration: 1.1, ease: [0.16, 1, 0.3, 1] }}
-      >
-        {/* soft grounding shadow under the figure */}
-        <div
-          aria-hidden
-          className="absolute inset-x-6 bottom-1 h-6 rounded-[100%] bg-graphite/25 blur-xl"
-        />
-        <Image
-          src={profile.image}
-          alt={profile.imageAlt}
-          fill
-          priority
-          sizes="(max-width: 1024px) 80vw, 40vw"
-          className="object-contain object-bottom drop-shadow-[0_30px_40px_rgba(22,19,15,0.25)]"
-        />
-      </motion.div>
-
-      {/* Scroll indicator */}
+      {/* Scroll indicator — desktop only */}
       <motion.a
         href="#about"
         aria-label="Scroll to about section"
-        className="shell relative z-10 flex items-center gap-3 pb-6 font-mono text-[0.62rem] uppercase tracking-label text-graphite/50"
+        className="shell relative z-10 hidden items-center gap-3 pb-6 font-mono text-[0.62rem] uppercase tracking-label text-graphite/50 lg:flex"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.4, duration: 0.8 }}
