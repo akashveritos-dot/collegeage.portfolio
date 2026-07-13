@@ -17,32 +17,22 @@ export default function About() {
           {/* Sticky portrait */}
           <div className="lg:col-span-5">
             <div className="lg:sticky lg:top-28">
-              {/* Cutout portrait — no box, standing on a 3D ground line */}
-              <div className="relative aspect-[4/5] w-full [perspective:700px]">
+              {/* Cutout portrait — no box, standing directly on the ground line */}
+              <div className="relative aspect-[4/5] w-full">
+                {/* grounding shadow + line sit exactly at the image's bottom edge */}
                 <div
                   aria-hidden
-                  className="absolute inset-x-0 bottom-8 h-24 [perspective:600px]"
+                  className="absolute inset-x-0 bottom-0 z-0"
                 >
-                  <div
-                    className="mx-auto h-full w-[80%] border-t border-graphite/25"
-                    style={{
-                      transform: "rotateX(74deg)",
-                      transformOrigin: "bottom",
-                      background:
-                        "linear-gradient(to top, rgba(198,58,36,0.10), transparent 70%)",
-                    }}
-                  />
+                  <div className="mx-auto h-4 w-[68%] rounded-[100%] bg-graphite/25 blur-md" />
+                  <div className="-mt-px h-px w-full bg-gradient-to-r from-transparent via-graphite/45 to-transparent" />
                 </div>
-                <div
-                  aria-hidden
-                  className="absolute inset-x-10 bottom-7 h-5 rounded-[100%] bg-graphite/25 blur-lg"
-                />
                 <Image
                   src={profile.image}
                   alt={profile.imageAlt}
                   fill
                   sizes="(max-width: 1024px) 90vw, 40vw"
-                  className="object-contain object-bottom drop-shadow-[0_24px_36px_rgba(22,19,15,0.22)]"
+                  className="relative z-[1] object-contain object-bottom drop-shadow-[0_18px_28px_rgba(22,19,15,0.22)]"
                 />
               </div>
               <div className="mt-4 flex items-center justify-between border-t border-graphite/15 pt-4 font-mono text-[0.62rem] uppercase tracking-label text-graphite/45">

@@ -12,7 +12,7 @@ export default function Hero() {
       id="home"
       className="relative flex min-h-[100svh] flex-col overflow-hidden pt-20 sm:pt-28"
     >
-      {/* 3D perspective ground line the figure stands on */}
+      {/* 3D perspective ground line the figure stands on — pinned to section bottom */}
       <div
         aria-hidden
         className="pointer-events-none absolute inset-x-0 bottom-0 z-0 [perspective:700px]"
@@ -29,8 +29,8 @@ export default function Hero() {
         <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-graphite/35 to-transparent" />
       </div>
 
+      {/* Text block */}
       <div className="shell relative z-10 flex flex-1 flex-col lg:grid lg:grid-cols-12 lg:items-center lg:gap-6">
-        {/* Text block */}
         <div className="relative z-10 shrink-0 lg:col-span-7">
           <motion.p
             className="label mb-3 flex items-center gap-3 sm:mb-6"
@@ -97,7 +97,7 @@ export default function Hero() {
             </a>
           </motion.div>
 
-          {/* selected credits strip — desktop only (keeps mobile first-view clean) */}
+          {/* selected credits strip — desktop only */}
           <motion.dl
             className="mt-12 hidden flex-wrap gap-x-10 gap-y-4 border-t border-graphite/15 pt-6 lg:flex"
             initial={{ opacity: 0 }}
@@ -124,38 +124,37 @@ export default function Hero() {
             ))}
           </motion.dl>
         </div>
-
-        {/* Portrait — flexes to fill the remaining first-view height on mobile,
-            absolutely anchored to the bottom-right on desktop. Cutout, no box. */}
-        <div className="relative flex min-h-0 flex-1 items-end justify-center lg:col-span-5 lg:block lg:flex-none">
-          <motion.div
-            className="relative h-full max-h-[52vh] w-full max-w-[15rem] xs:max-w-[17rem] sm:max-h-[58vh] sm:max-w-[20rem] lg:absolute lg:bottom-0 lg:right-[max(1.5rem,calc((100vw-1600px)/2+3rem))] lg:max-h-none lg:h-[86vh] lg:w-[40vw] lg:max-w-[600px]"
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5, duration: 1.1, ease: [0.16, 1, 0.3, 1] }}
-          >
-            {/* soft grounding shadow under the figure */}
-            <div
-              aria-hidden
-              className="absolute inset-x-6 bottom-1 h-5 rounded-[100%] bg-graphite/25 blur-lg sm:h-6 sm:blur-xl"
-            />
-            <Image
-              src={profile.image}
-              alt={profile.imageAlt}
-              fill
-              priority
-              sizes="(max-width: 1024px) 70vw, 40vw"
-              className="object-contain object-bottom drop-shadow-[0_24px_36px_rgba(22,19,15,0.25)]"
-            />
-          </motion.div>
-        </div>
       </div>
 
-      {/* Scroll indicator — desktop only */}
+      {/* Portrait — DIRECT child of the section, so its bottom shares the exact
+          same reference as the ground line. Cutout, no box; feet touch the line.
+          Mobile: in normal flow at the bottom. Desktop: absolute bottom-right. */}
+      <motion.div
+        className="pointer-events-none relative z-[5] mx-auto -mt-2 h-[42vh] w-full max-w-[15rem] shrink-0 xs:max-w-[17rem] sm:h-[46vh] sm:max-w-[20rem] lg:absolute lg:bottom-0 lg:right-[max(1.5rem,calc((100vw-1600px)/2+1rem))] lg:mx-0 lg:mt-0 lg:h-[84vh] lg:max-h-[860px] lg:w-[36vw] lg:max-w-[540px]"
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.5, duration: 1.1, ease: [0.16, 1, 0.3, 1] }}
+      >
+        {/* soft grounding shadow right under the figure */}
+        <div
+          aria-hidden
+          className="absolute inset-x-8 bottom-0 h-4 rounded-[100%] bg-graphite/25 blur-lg sm:h-5"
+        />
+        <Image
+          src={profile.image}
+          alt={profile.imageAlt}
+          fill
+          priority
+          sizes="(max-width: 1024px) 70vw, 40vw"
+          className="object-contain object-bottom drop-shadow-[0_20px_30px_rgba(22,19,15,0.25)]"
+        />
+      </motion.div>
+
+      {/* Scroll indicator — desktop only, sits left of the portrait */}
       <motion.a
         href="#about"
         aria-label="Scroll to about section"
-        className="shell relative z-10 hidden items-center gap-3 pb-6 font-mono text-[0.62rem] uppercase tracking-label text-graphite/50 lg:flex"
+        className="shell pointer-events-auto absolute inset-x-0 bottom-6 z-10 hidden items-center gap-3 font-mono text-[0.62rem] uppercase tracking-label text-graphite/50 lg:flex"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.4, duration: 0.8 }}
