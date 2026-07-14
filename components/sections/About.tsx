@@ -28,7 +28,7 @@ export default function About() {
                   <div className="-mt-px h-px w-full bg-gradient-to-r from-transparent via-graphite/45 to-transparent" />
                 </div>
                 <Image
-                  src={profile.image}
+                  src="/images/WhatsApp Image 2026-07-14 at 10.12.38 PM-Photoroom.png"
                   alt={profile.imageAlt}
                   fill
                   sizes="(max-width: 1024px) 90vw, 40vw"

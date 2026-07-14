@@ -23,7 +23,7 @@ export default function ProjectPoster({
         fill
         priority={priority}
         sizes={sizes}
-        className="object-cover"
+        className="object-contain object-bottom"
       />
     );
   }

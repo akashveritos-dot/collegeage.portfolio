@@ -140,6 +140,61 @@ export default function Showreel() {
             </div>
           </div>
         </div>
+
+        {/* Sub-row: Production Stills Showcase */}
+        <Reveal className="mt-16 border-t border-ivory/10 pt-12">
+          <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between mb-8">
+            <div>
+              <p className="font-mono text-xs text-reel uppercase tracking-label">Gallery Showcase</p>
+              <h4 className="font-display text-2xl font-light text-ivory mt-1">Production Stills</h4>
+            </div>
+            <p className="font-mono text-[0.62rem] uppercase tracking-label text-ivory/40">Frame 01, 02 & 03 · Editorial Bay</p>
+          </div>
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+            <div className="group relative aspect-video w-full overflow-hidden rounded border border-ivory/5 bg-black/20 shadow-lg transition-all duration-500 hover:border-ivory/20">
+              <Image
+                src="/images/WhatsApp Image 2026-07-14 at 10.10.30 PM.jpeg"
+                alt="The Flight Attendant production still - Rakesh Lal Das"
+                fill
+                sizes="(max-width: 768px) 100vw, 33vw"
+                className="object-contain transition-transform duration-500 group-hover:scale-[1.03]"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+              <div className="absolute bottom-4 left-4 right-4 flex justify-between font-mono text-[0.6rem] uppercase tracking-label text-ivory/80 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                <span>Flight Attendant</span>
+                <span>Frame 01</span>
+              </div>
+            </div>
+            <div className="group relative aspect-video w-full overflow-hidden rounded border border-ivory/5 bg-black/20 shadow-lg transition-all duration-500 hover:border-ivory/20">
+              <Image
+                src="/images/rakesh-lal-das.png"
+                alt="Faltu production still - Rakesh Lal Das"
+                fill
+                sizes="(max-width: 768px) 100vw, 33vw"
+                className="object-contain object-bottom transition-transform duration-500 group-hover:scale-[1.03]"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+              <div className="absolute bottom-4 left-4 right-4 flex justify-between font-mono text-[0.6rem] uppercase tracking-label text-ivory/80 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                <span>Faltu</span>
+                <span>Frame 02</span>
+              </div>
+            </div>
+            <div className="group relative aspect-video w-full overflow-hidden rounded border border-ivory/5 bg-black/20 shadow-lg transition-all duration-500 hover:border-ivory/20">
+              <Image
+                src="/images/WhatsApp Image 2026-07-14 at 10.11.49 PM.jpeg"
+                alt="Nazar production still - Rakesh Lal Das"
+                fill
+                sizes="(max-width: 768px) 100vw, 33vw"
+                className="object-contain transition-transform duration-500 group-hover:scale-[1.03]"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+              <div className="absolute bottom-4 left-4 right-4 flex justify-between font-mono text-[0.6rem] uppercase tracking-label text-ivory/80 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                <span>Nazar</span>
+                <span>Frame 03</span>
+              </div>
+            </div>
+          </div>
+        </Reveal>
       </div>
     </section>
   );
