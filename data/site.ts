@@ -54,55 +54,76 @@ export const projects: Project[] = [
     slug: "flight-attendant",
     title: "Flight Attendant",
     year: 2024,
-    format: "Series", // TODO: confirm exact format
+    format: "TV Series",
     role: "Editor",
     tagline: "Tension held at altitude.",
     description:
-      "Editorial work on Flight Attendant (2024). Detailed synopsis and scene notes to be added.", // TODO
-    cover: null, // TODO: /images/projects/flight-attendant.jpg
-    gallery: [], // TODO: add still frames
+      "Crafted precise suspense and rhythmic pacing across episodes of the dark comedy-thriller series Flight Attendant, keeping viewers on the edge of their seats.",
+    cover: "/images/projects/flight-attendant.jpg",
+    gallery: [
+      "/images/projects/flight-attendant.jpg",
+      "/images/WhatsApp Image 2026-07-14 at 10.10.30 PM.jpeg"
+    ],
     credits: [
       { label: "Role", value: "Editor" },
+      { label: "Format", value: "TV Series" },
+      { label: "Episodes", value: "6 episodes" },
       { label: "Year", value: "2024" },
     ],
     externalUrl: "https://www.imdb.com/name/nm12607916/", // IMDb profile link
     externalLabel: "IMDb Profile",
+    rating: "5.5",
+    episodes: "6 episodes",
   },
   {
     slug: "faltu",
     title: "Faltu",
     year: 2022,
-    format: "Television", // TODO: confirm exact format
+    format: "TV Series",
     role: "Editor",
     tagline: "Everyday lives, precisely paced.",
     description:
-      "Editorial work on Faltu (2022). Detailed synopsis and scene notes to be added.", // TODO
-    cover: null, // TODO: /images/projects/faltu.jpg
-    gallery: [],
+      "Editorial lead for Faltu, shaping the dramatic flow, pacing, and emotional high-points of this popular television series.",
+    cover: "/images/projects/faltu.jpg",
+    gallery: [
+      "/images/projects/faltu.jpg",
+      "/images/rakesh-lal-das.png"
+    ],
     credits: [
       { label: "Role", value: "Editor" },
+      { label: "Format", value: "TV Series" },
+      { label: "Episodes", value: "312 episodes" },
       { label: "Year", value: "2022" },
     ],
     externalUrl: "https://www.imdb.com/name/nm12607916/", // IMDb profile link
     externalLabel: "IMDb Profile",
+    rating: "6.8",
+    episodes: "312 episodes",
   },
   {
     slug: "nazar",
     title: "Nazar",
     year: 2018,
-    format: "Television", // TODO: confirm exact format
+    format: "TV Series",
     role: "Editor",
     tagline: "Suspense cut close.",
     description:
-      "Editorial work on Nazar (2018). Detailed synopsis and scene notes to be added.", // TODO
-    cover: null, // TODO: /images/projects/nazar.jpg
-    gallery: [],
+      "Edited episodes of Nazar, weaving supernatural elements, fast-paced action sequences, and high-tension cliffhangers.",
+    cover: "/images/projects/nazar.jpg",
+    gallery: [
+      "/images/projects/nazar.jpg",
+      "/images/WhatsApp Image 2026-07-14 at 10.11.49 PM.jpeg"
+    ],
     credits: [
       { label: "Role", value: "Editor" },
+      { label: "Format", value: "TV Series" },
+      { label: "Episodes", value: "409 episodes" },
       { label: "Year", value: "2018" },
     ],
     externalUrl: "https://www.imdb.com/name/nm12607916/", // IMDb profile link
     externalLabel: "IMDb Profile",
+    rating: "5.8",
+    episodes: "409 episodes",
   },
 ];
 

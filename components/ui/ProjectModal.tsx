@@ -93,7 +93,7 @@ export default function ProjectModal({
 
         <div className="px-6 pb-16 sm:px-10">
           {/* hero visual */}
-          <div className="relative mt-2 aspect-video w-full overflow-hidden">
+          <div className="relative mt-2 aspect-video w-full overflow-hidden rounded bg-black/90 border border-graphite/10 shadow-sm">
             <ProjectPoster project={project} sizes="(max-width: 768px) 100vw, 640px" />
           </div>
 

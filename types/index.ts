@@ -20,6 +20,10 @@ export type Project = {
   /** Optional external link (trailer / IMDb). null hides the control */
   externalUrl: string | null;
   externalLabel: string | null;
+  /** Optional IMDb rating */
+  rating?: string;
+  /** Optional episode count */
+  episodes?: string;
 };
 
 export type SocialLink = {
