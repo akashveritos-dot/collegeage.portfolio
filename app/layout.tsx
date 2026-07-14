@@ -96,6 +96,23 @@ export default function RootLayout({
     >
       <body className="grain antialiased" suppressHydrationWarning>
         <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                var handleChunkError = function(e) {
+                  var msg = e && (e.message || (e.reason && e.reason.message) || '');
+                  if (msg && (msg.indexOf('ChunkLoadError') !== -1 || msg.indexOf('Loading chunk') !== -1)) {
+                    console.warn('Chunk load error detected. Reloading page...');
+                    window.location.reload(true);
+                  }
+                };
+                window.addEventListener('error', handleChunkError, true);
+                window.addEventListener('unhandledrejection', handleChunkError);
+              })();
+            `
+          }}
+        />
+        <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
         />
