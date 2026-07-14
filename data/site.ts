@@ -43,6 +43,7 @@ export const nav: NavItem[] = [
   { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
   { label: "Selected Work", href: "#work" },
+  { label: "Reel", href: "#reel" },
   { label: "Credits", href: "#credits" },
   { label: "Experience", href: "#experience" },
   { label: "Contact", href: "#contact" },
@@ -64,8 +65,8 @@ export const projects: Project[] = [
       { label: "Role", value: "Editor" },
       { label: "Year", value: "2024" },
     ],
-    externalUrl: null, // TODO: IMDb / trailer URL
-    externalLabel: null,
+    externalUrl: "https://www.imdb.com/name/nm12607916/", // IMDb profile link
+    externalLabel: "IMDb Profile",
   },
   {
     slug: "faltu",
@@ -82,8 +83,8 @@ export const projects: Project[] = [
       { label: "Role", value: "Editor" },
       { label: "Year", value: "2022" },
     ],
-    externalUrl: null, // TODO
-    externalLabel: null,
+    externalUrl: "https://www.imdb.com/name/nm12607916/", // IMDb profile link
+    externalLabel: "IMDb Profile",
   },
   {
     slug: "nazar",
@@ -100,8 +101,8 @@ export const projects: Project[] = [
       { label: "Role", value: "Editor" },
       { label: "Year", value: "2018" },
     ],
-    externalUrl: null, // TODO
-    externalLabel: null,
+    externalUrl: "https://www.imdb.com/name/nm12607916/", // IMDb profile link
+    externalLabel: "IMDb Profile",
   },
 ];
 
@@ -144,7 +145,7 @@ export const capabilities: Capability[] = [
 ];
 
 export const socials: SocialLink[] = [
-  { label: "IMDb", href: null, icon: "film" }, // TODO: verified IMDb URL
+  { label: "IMDb", href: "https://www.imdb.com/name/nm12607916/", icon: "film" }, // verified IMDb URL
   { label: "LinkedIn", href: null, icon: "linkedin" }, // TODO
   { label: "Instagram", href: null, icon: "instagram" }, // TODO
   { label: "YouTube", href: null, icon: "youtube" }, // TODO

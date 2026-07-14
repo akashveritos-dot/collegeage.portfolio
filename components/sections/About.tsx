@@ -6,7 +6,7 @@ import { Reveal, RevealLines } from "@/components/motion/Reveal";
 
 export default function About() {
   return (
-    <section id="about" className="relative bg-ivory py-24 sm:py-32">
+    <section id="about" className="relative bg-ivory py-16 sm:py-24 lg:py-32">
       <div className="shell">
         <Reveal className="mb-14 flex items-center gap-4">
           <span className="label">01 — About</span>
@@ -32,7 +32,7 @@ export default function About() {
                   alt={profile.imageAlt}
                   fill
                   sizes="(max-width: 1024px) 90vw, 40vw"
-                  className="relative z-[1] object-contain object-bottom drop-shadow-[0_18px_28px_rgba(22,19,15,0.22)]"
+                  className="absolute z-[1] object-contain object-bottom drop-shadow-[0_18px_28px_rgba(22,19,15,0.22)]"
                 />
               </div>
               <div className="mt-4 flex items-center justify-between border-t border-graphite/15 pt-4 font-mono text-[0.62rem] uppercase tracking-label text-graphite/45">

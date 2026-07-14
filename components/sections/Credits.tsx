@@ -8,10 +8,10 @@ const timeline = [...projects].sort((a, b) => a.year - b.year);
 
 export default function Credits() {
   return (
-    <section id="credits" className="relative bg-ivory py-24 sm:py-32">
+    <section id="credits" className="relative bg-ivory py-16 sm:py-24 lg:py-32">
       <div className="shell">
         <Reveal className="mb-14 flex items-center gap-4">
-          <span className="label">04 — Credits</span>
+          <span className="label">05 — Credits</span>
           <span className="h-px flex-1 bg-graphite/15" />
           <span className="font-mono text-[0.68rem] uppercase tracking-label text-graphite/40">
             Scene Index

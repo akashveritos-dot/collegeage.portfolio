@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { Film } from "lucide-react";
 import { profile, projects } from "@/data/site";
 
 const years = projects.map((p) => p.year).sort((a, b) => a - b);
@@ -88,6 +89,15 @@ export default function Hero() {
               className="inline-flex items-center gap-2 rounded-full border border-graphite/25 px-5 py-2.5 font-mono text-[0.7rem] uppercase tracking-label text-graphite transition-colors hover:border-graphite hover:bg-graphite hover:text-ivory sm:px-6 sm:py-3 sm:text-xs"
             >
               About Rakesh
+            </a>
+            <a
+              href="https://www.imdb.com/name/nm12607916/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex items-center gap-2 rounded-full border border-[#e2bd02]/30 bg-[#e2bd02]/5 px-5 py-2.5 font-mono text-[0.7rem] uppercase tracking-label text-graphite transition-colors hover:border-[#e2bd02] hover:bg-[#e2bd02] hover:text-black sm:px-6 sm:py-3 sm:text-xs"
+            >
+              <Film size={12} className="text-[#e2bd02] transition-colors group-hover:text-black" />
+              IMDb Profile
             </a>
             <a
               href="#contact"

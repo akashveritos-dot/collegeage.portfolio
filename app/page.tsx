@@ -3,6 +3,7 @@ import Preloader from "@/components/Preloader";
 import Hero from "@/components/sections/Hero";
 import About from "@/components/sections/About";
 import Work from "@/components/sections/Work";
+import Showreel from "@/components/sections/Showreel";
 import Philosophy from "@/components/sections/Philosophy";
 import Credits from "@/components/sections/Credits";
 import Capabilities from "@/components/sections/Capabilities";
@@ -18,6 +19,7 @@ export default function Home() {
         <Hero />
         <About />
         <Work />
+        <Showreel />
         <Philosophy />
         <Credits />
         <Capabilities />

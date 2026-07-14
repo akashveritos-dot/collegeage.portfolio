@@ -5,11 +5,11 @@ import { Reveal } from "@/components/motion/Reveal";
 
 export default function Capabilities() {
   return (
-    <section id="experience" className="relative bg-graphite py-24 text-ivory sm:py-32">
+    <section id="experience" className="relative bg-graphite py-16 text-ivory sm:py-24 lg:py-32">
       <div className="shell">
         <Reveal className="mb-14 flex items-center gap-4">
           <span className="font-mono text-[0.68rem] uppercase tracking-label text-reel">
-            05 — Experience
+            06 — Experience
           </span>
           <span className="h-px flex-1 bg-ivory/15" />
         </Reveal>

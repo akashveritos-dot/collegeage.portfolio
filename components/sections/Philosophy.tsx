@@ -44,11 +44,11 @@ export default function Philosophy() {
     <section
       ref={root}
       id="philosophy"
-      className="relative overflow-hidden bg-ivory py-24 sm:py-32"
+      className="relative overflow-hidden bg-ivory py-16 sm:py-24 lg:py-32"
     >
       <div className="shell">
         <Reveal className="mb-10 flex items-center gap-4">
-          <span className="label">03 — Philosophy</span>
+          <span className="label">04 — Philosophy</span>
           <span className="h-px flex-1 bg-graphite/15" />
         </Reveal>
 

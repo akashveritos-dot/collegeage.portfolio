@@ -34,9 +34,11 @@
   html.lenis body {
     height: auto;
   }
+
   .lenis.lenis-smooth {
     scroll-behavior: auto !important;
   }
+
   .lenis.lenis-stopped {
     overflow: hidden;
   }
@@ -68,6 +70,7 @@
     background-position: left bottom;
     transition: background-size 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   }
+
   .link-underline:hover {
     background-size: 100% 1px;
   }
@@ -90,6 +93,7 @@
   line-height: 0.92;
   letter-spacing: -0.02em;
 }
+
 .text-display {
   font-size: clamp(2rem, 6vw, 4.75rem);
   line-height: 0.98;

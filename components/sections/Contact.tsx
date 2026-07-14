@@ -74,11 +74,11 @@ export default function Contact() {
     "w-full border-b border-ivory/25 bg-transparent py-3 text-ivory placeholder:text-ivory/30 focus:border-reel focus:outline-none";
 
   return (
-    <section id="contact" className="relative bg-graphite py-24 text-ivory sm:py-32">
+    <section id="contact" className="relative bg-graphite py-16 text-ivory sm:py-24 lg:py-32">
       <div className="shell">
         <Reveal className="mb-12 flex items-center gap-4">
           <span className="font-mono text-[0.68rem] uppercase tracking-label text-reel">
-            06 — Contact
+            07 — Contact
           </span>
           <span className="h-px flex-1 bg-ivory/15" />
         </Reveal>

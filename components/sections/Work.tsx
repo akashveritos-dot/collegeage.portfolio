@@ -18,7 +18,7 @@ export default function Work() {
     setActive((i) => (i === null ? null : (i + 1) % projects.length));
 
   return (
-    <section id="work" className="relative bg-graphite py-24 text-ivory sm:py-32">
+    <section id="work" className="relative bg-graphite py-16 text-ivory sm:py-24 lg:py-32">
       <div className="shell">
         <Reveal className="mb-14 flex items-center gap-4">
           <span className="font-mono text-[0.68rem] uppercase tracking-label text-reel">
