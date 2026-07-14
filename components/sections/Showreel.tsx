@@ -153,11 +153,11 @@ export default function Showreel() {
           <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
             <div className="group relative aspect-video w-full overflow-hidden rounded border border-ivory/5 bg-black/20 shadow-lg transition-all duration-500 hover:border-ivory/20">
               <Image
-                src="/images/WhatsApp Image 2026-07-14 at 10.10.30 PM.jpeg"
+                src="/images/flight-attendant-still.jpg?v=1"
                 alt="The Flight Attendant production still - Rakesh Lal Das"
                 fill
                 sizes="(max-width: 768px) 100vw, 33vw"
-                className="object-contain transition-transform duration-500 group-hover:scale-[1.03]"
+                className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
               <div className="absolute bottom-4 left-4 right-4 flex justify-between font-mono text-[0.6rem] uppercase tracking-label text-ivory/80 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
@@ -167,11 +167,11 @@ export default function Showreel() {
             </div>
             <div className="group relative aspect-video w-full overflow-hidden rounded border border-ivory/5 bg-black/20 shadow-lg transition-all duration-500 hover:border-ivory/20">
               <Image
-                src="/images/rakesh-lal-das.png"
+                src="/images/faltu-still.jpg?v=1"
                 alt="Faltu production still - Rakesh Lal Das"
                 fill
                 sizes="(max-width: 768px) 100vw, 33vw"
-                className="object-contain object-bottom transition-transform duration-500 group-hover:scale-[1.03]"
+                className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
               <div className="absolute bottom-4 left-4 right-4 flex justify-between font-mono text-[0.6rem] uppercase tracking-label text-ivory/80 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
@@ -181,11 +181,11 @@ export default function Showreel() {
             </div>
             <div className="group relative aspect-video w-full overflow-hidden rounded border border-ivory/5 bg-black/20 shadow-lg transition-all duration-500 hover:border-ivory/20">
               <Image
-                src="/images/WhatsApp Image 2026-07-14 at 10.11.49 PM.jpeg"
+                src="/images/nazar-still.jpg?v=1"
                 alt="Nazar production still - Rakesh Lal Das"
                 fill
                 sizes="(max-width: 768px) 100vw, 33vw"
-                className="object-contain transition-transform duration-500 group-hover:scale-[1.03]"
+                className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
               <div className="absolute bottom-4 left-4 right-4 flex justify-between font-mono text-[0.6rem] uppercase tracking-label text-ivory/80 opacity-0 transition-opacity duration-300 group-hover:opacity-100">

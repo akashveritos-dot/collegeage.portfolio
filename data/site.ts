@@ -29,7 +29,7 @@ export const profile = {
     "I am an editor working across film and television. My credits include Faltu (2022), Flight Attendant (2024) and Nazar (2018) — projects that move between grounded drama and heightened storytelling.",
     "My work is guided by a single question in every scene: what does the audience need to feel next? The answer decides where a shot begins, how long it breathes and the exact frame it lets go.",
   ],
-  image: "/images/rakesh-lal-das.png",
+  image: "/images/rakesh-lal-das.png?v=1",
   imageAlt: "Portrait of Rakesh Lal Das, film and television editor",
   // Optional — set to a real file in /public when available, else null
   resumeUrl: null as string | null,
@@ -59,10 +59,10 @@ export const projects: Project[] = [
     tagline: "Tension held at altitude.",
     description:
       "Crafted precise suspense and rhythmic pacing across episodes of the dark comedy-thriller series Flight Attendant, keeping viewers on the edge of their seats.",
-    cover: "/images/projects/flight-attendant.jpg",
+    cover: "/images/flight-attendant-still.jpg?v=1",
     gallery: [
-      "/images/projects/flight-attendant.jpg",
-      "/images/WhatsApp Image 2026-07-14 at 10.10.30 PM.jpeg"
+      "/images/flight-attendant-still.jpg?v=1",
+      "/images/projects/flight-attendant.jpg?v=1"
     ],
     credits: [
       { label: "Role", value: "Editor" },
@@ -84,10 +84,11 @@ export const projects: Project[] = [
     tagline: "Everyday lives, precisely paced.",
     description:
       "Editorial lead for Faltu, shaping the dramatic flow, pacing, and emotional high-points of this popular television series.",
-    cover: "/images/projects/faltu.jpg",
+    cover: "/images/faltu-still.jpg?v=1",
     gallery: [
-      "/images/projects/faltu.jpg",
-      "/images/rakesh-lal-das.png"
+      "/images/faltu-still.jpg?v=1",
+      "/images/projects/faltu.jpg?v=1",
+      "/images/rakesh-lal-das.png?v=1"
     ],
     credits: [
       { label: "Role", value: "Editor" },
@@ -109,10 +110,10 @@ export const projects: Project[] = [
     tagline: "Suspense cut close.",
     description:
       "Edited episodes of Nazar, weaving supernatural elements, fast-paced action sequences, and high-tension cliffhangers.",
-    cover: "/images/projects/nazar.jpg",
+    cover: "/images/nazar-still.jpg?v=1",
     gallery: [
-      "/images/projects/nazar.jpg",
-      "/images/WhatsApp Image 2026-07-14 at 10.11.49 PM.jpeg"
+      "/images/nazar-still.jpg?v=1",
+      "/images/projects/nazar.jpg?v=1"
     ],
     credits: [
       { label: "Role", value: "Editor" },

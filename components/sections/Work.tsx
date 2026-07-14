@@ -48,11 +48,11 @@ export default function Work() {
             >
               <Reveal>
                 <div className="flex items-center gap-4 sm:gap-6">
-                  {/* Poster Thumbnail (Left) */}
+                  {/* Scene Thumbnail (Left) */}
                   <button
                     type="button"
                     onClick={() => open(i)}
-                    className="group relative aspect-[2/3] w-16 sm:w-20 overflow-hidden rounded bg-black/40 border border-ivory/10 shadow-lg transition-transform duration-300 hover:scale-[1.03] flex-shrink-0"
+                    className="group relative aspect-video w-20 sm:w-28 overflow-hidden rounded bg-black/40 border border-ivory/10 shadow-lg transition-transform duration-300 hover:scale-[1.03] flex-shrink-0"
                   >
                     {project.cover ? (
                       <Image
