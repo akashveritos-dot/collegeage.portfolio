@@ -90,19 +90,19 @@ export default function Work() {
             >
               <Reveal>
                 <div className="flex items-center gap-4 sm:gap-6">
-                  {/* Poster Thumbnail (Left) */}
+                  {/* Poster Thumbnail (Left - 2:3 IMDb Poster Ratio, uncropped object-contain) */}
                   <button
                     type="button"
                     onClick={() => openBySlug(project.slug)}
-                    className="group relative aspect-video w-24 sm:w-36 overflow-hidden rounded-lg bg-black/60 border border-ivory/10 shadow-lg transition-transform duration-300 hover:scale-[1.03] flex-shrink-0"
+                    className="group relative aspect-[2/3] w-16 sm:w-24 overflow-hidden rounded-md bg-black/90 border border-ivory/15 shadow-md transition-transform duration-300 hover:scale-[1.04] flex-shrink-0"
                   >
                     {project.cover ? (
                       <Image
                         src={project.cover}
                         alt={`${project.title} poster frame`}
                         fill
-                        sizes="144px"
-                        className="object-cover"
+                        sizes="96px"
+                        className="object-contain p-0.5"
                       />
                     ) : (
                       <div className="absolute inset-0 flex items-center justify-center bg-black/60 font-mono text-[0.6rem] text-ivory/40">
