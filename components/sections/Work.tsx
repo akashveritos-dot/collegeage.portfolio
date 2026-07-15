@@ -13,7 +13,7 @@ export default function Work() {
   const [active, setActive] = useState<number | null>(null);
   const [hovered, setHovered] = useState<number | null>(null);
   const [selectedFormat, setSelectedFormat] = useState<string>("ALL");
-  const [viewMode, setViewMode] = useState<"grid" | "list">("grid");
+  const [viewMode, setViewMode] = useState<"grid" | "list">("list");
 
   const formats = ["ALL", "TV Series", "Short Film"];
 

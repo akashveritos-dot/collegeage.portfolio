@@ -223,8 +223,8 @@ export const projects: Project[] = [
     tagline: "Overcoming odds in raw narrative detail.",
     description:
       "Edited the compelling short film I Am Not Down, focusing on raw performance cuts, atmospheric silence, and emotional weight.",
-    cover: "/images/projects/i-am-not-down.png",
-    gallery: ["/images/projects/i-am-not-down.png"],
+    cover: "/images/projects/i-am-not-down.jpg",
+    gallery: ["/images/projects/i-am-not-down.jpg"],
     credits: [
       { label: "Role", value: "Editor" },
       { label: "Format", value: "Short Film" },
@@ -242,8 +242,8 @@ export const projects: Project[] = [
     tagline: "Heroic fantasy and dynamic action cuts.",
     description:
       "Edited fantasy adventure episodes for Baalveer 3, structuring visual effects sequences and fast-paced superhero narrative beats.",
-    cover: "/images/projects/baalveer-3.png",
-    gallery: ["/images/projects/baalveer-3.png"],
+    cover: "/images/projects/baalveer-3.jpg",
+    gallery: ["/images/projects/baalveer-3.jpg"],
     credits: [
       { label: "Role", value: "Editor" },
       { label: "Format", value: "TV Series" },
@@ -264,8 +264,8 @@ export const projects: Project[] = [
     tagline: "High chemistry, intense emotional rhythm.",
     description:
       "Edited 113 episodes of Ishk Par Zor Nahin (2021), delivering sharp comedic timing alongside passionate romantic climaxes.",
-    cover: "/images/projects/ishk-par-zor-nahin.png",
-    gallery: ["/images/projects/ishk-par-zor-nahin.png"],
+    cover: "/images/projects/ishk-par-zor-nahin.jpg",
+    gallery: ["/images/projects/ishk-par-zor-nahin.jpg"],
     credits: [
       { label: "Role", value: "Editor" },
       { label: "Format", value: "TV Series" },
@@ -286,8 +286,8 @@ export const projects: Project[] = [
     tagline: "Dance, passion, and societal collision.",
     description:
       "Lead editor for 53 episodes of Namak Issk Ka (2020–2021), synchronizing high-energy dance numbers and dramatic confrontations.",
-    cover: "/images/projects/namak-issk-ka.png",
-    gallery: ["/images/projects/namak-issk-ka.png"],
+    cover: "/images/projects/namak-issk-ka.jpg",
+    gallery: ["/images/projects/namak-issk-ka.jpg"],
     credits: [
       { label: "Role", value: "Editor" },
       { label: "Format", value: "TV Series" },
