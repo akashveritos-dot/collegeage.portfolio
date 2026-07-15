@@ -33,7 +33,7 @@ export default function Work() {
   return (
     <section
       id="work"
-      className="relative bg-graphite py-10 text-ivory sm:py-16 lg:py-20"
+      className="relative overflow-hidden w-full max-w-full bg-graphite py-10 text-ivory sm:py-16 lg:py-20"
     >
       {/* Subtle ambient glow */}
       <div

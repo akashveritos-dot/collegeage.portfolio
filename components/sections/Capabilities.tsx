@@ -5,7 +5,7 @@ import { Reveal } from "@/components/motion/Reveal";
 
 export default function Capabilities() {
   return (
-    <section id="experience" className="relative bg-graphite py-10 text-ivory sm:py-16 lg:py-20">
+    <section id="experience" className="relative overflow-hidden w-full max-w-full bg-graphite py-10 text-ivory sm:py-16 lg:py-20">
       <div className="shell">
         <Reveal className="mb-6 sm:mb-8 flex items-center gap-4">
           <span className="font-mono text-xs sm:text-sm font-semibold uppercase tracking-wider text-reel">

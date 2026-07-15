@@ -20,13 +20,18 @@
   html {
     scroll-behavior: smooth;
     background-color: var(--graphite);
+    overflow-x: hidden !important;
+    max-width: 100vw;
   }
 
   body {
     background-color: var(--ivory);
     color: var(--graphite);
     font-family: var(--font-sans);
-    overflow-x: hidden;
+    overflow-x: hidden !important;
+    max-width: 100vw;
+    width: 100%;
+    position: relative;
   }
 
   /* Lenis smooth scroll */
@@ -56,7 +61,7 @@
 
 @layer components {
   .shell {
-    @apply mx-auto w-full max-w-shell px-5 sm:px-8 lg:px-12;
+    @apply mx-auto w-full max-w-shell px-4 sm:px-8 lg:px-12 overflow-x-hidden;
   }
 
   .label {

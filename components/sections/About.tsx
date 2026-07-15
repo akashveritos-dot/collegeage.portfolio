@@ -6,7 +6,7 @@ import { Reveal, RevealLines } from "@/components/motion/Reveal";
 
 export default function About() {
   return (
-    <section id="about" className="relative bg-ivory py-10 sm:py-16 lg:py-20">
+    <section id="about" className="relative overflow-hidden w-full max-w-full bg-ivory py-10 sm:py-16 lg:py-20">
       <div className="shell">
         <Reveal className="mb-6 sm:mb-8 flex items-center gap-4">
           <span className="font-mono text-xs sm:text-sm font-semibold uppercase tracking-wider text-reel">
