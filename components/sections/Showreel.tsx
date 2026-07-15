@@ -153,9 +153,10 @@ export default function Showreel() {
           <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
             <div className="group relative aspect-video w-full overflow-hidden rounded border border-ivory/5 bg-black/20 shadow-lg transition-all duration-500 hover:border-ivory/20">
               <Image
-                src="/images/flight-attendant-still.jpg?v=1"
+                src="/images/flight-attendant-still.jpg"
                 alt="The Flight Attendant production still - Rakesh Lal Das"
                 fill
+                unoptimized
                 sizes="(max-width: 768px) 100vw, 33vw"
                 className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
               />
@@ -167,9 +168,10 @@ export default function Showreel() {
             </div>
             <div className="group relative aspect-video w-full overflow-hidden rounded border border-ivory/5 bg-black/20 shadow-lg transition-all duration-500 hover:border-ivory/20">
               <Image
-                src="/images/faltu-still.jpg?v=1"
+                src="/images/faltu-still.jpg"
                 alt="Faltu production still - Rakesh Lal Das"
                 fill
+                unoptimized
                 sizes="(max-width: 768px) 100vw, 33vw"
                 className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
               />
@@ -181,9 +183,10 @@ export default function Showreel() {
             </div>
             <div className="group relative aspect-video w-full overflow-hidden rounded border border-ivory/5 bg-black/20 shadow-lg transition-all duration-500 hover:border-ivory/20">
               <Image
-                src="/images/nazar-still.jpg?v=1"
+                src="/images/nazar-still.jpg"
                 alt="Nazar production still - Rakesh Lal Das"
                 fill
+                unoptimized
                 sizes="(max-width: 768px) 100vw, 33vw"
                 className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
               />

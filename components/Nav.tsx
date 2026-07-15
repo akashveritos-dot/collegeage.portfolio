@@ -7,21 +7,41 @@ import { nav, profile } from "@/data/site";
 export default function Nav() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [visible, setVisible] = useState(true);
+  const lastScrollY = useRef(0);
   const panelRef = useRef<HTMLDivElement>(null);
   const toggleRef = useRef<HTMLButtonElement>(null);
 
-  // Subtle nav change on scroll
+  // Subtle nav change on scroll + auto-hide header on scroll down
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40);
+    const onScroll = () => {
+      const currentScrollY = window.scrollY;
+      setScrolled(currentScrollY > 40);
+
+      if (!open) {
+        if (currentScrollY < 60) {
+          setVisible(true);
+        } else if (currentScrollY > lastScrollY.current + 8) {
+          // Scrolling down with a small threshold -> hide
+          setVisible(false);
+        } else if (currentScrollY < lastScrollY.current - 8) {
+          // Scrolling up with a small threshold -> show
+          setVisible(true);
+        }
+      }
+      lastScrollY.current = currentScrollY;
+    };
+
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  }, [open]);
 
   // Body scroll lock + Escape + focus management for mobile menu
   useEffect(() => {
     if (!open) return;
     document.body.style.overflow = "hidden";
+    setVisible(true); // Always show header when mobile menu is open
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
         setOpen(false);
@@ -59,9 +79,11 @@ export default function Nav() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-[80] transition-colors duration-500 ${
+      className={`fixed inset-x-0 top-0 z-[80] transition-all duration-300 ease-out ${
+        visible ? "translate-y-0" : "-translate-y-full"
+      } ${
         scrolled && !open
-          ? "bg-ivory/80 backdrop-blur-md"
+          ? "bg-ivory/80 backdrop-blur-md border-b border-graphite/5"
           : "bg-transparent"
       }`}
     >

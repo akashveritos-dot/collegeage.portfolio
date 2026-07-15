@@ -94,15 +94,27 @@
 
 /* Fluid display type helpers */
 .text-hero {
-  font-size: clamp(2.75rem, 11vw, 11rem);
-  line-height: 0.92;
+  font-size: clamp(2.25rem, 9vw, 8rem);
+  line-height: 1.08;
   letter-spacing: -0.02em;
 }
 
+@media (min-width: 640px) {
+  .text-hero {
+    line-height: 0.95;
+  }
+}
+
 .text-display {
-  font-size: clamp(2rem, 6vw, 4.75rem);
-  line-height: 0.98;
+  font-size: clamp(1.68rem, 5.5vw, 3.75rem);
+  line-height: 1.15;
   letter-spacing: -0.015em;
+}
+
+@media (min-width: 640px) {
+  .text-display {
+    line-height: 1.05;
+  }
 }
 
 /* Reveal masking */

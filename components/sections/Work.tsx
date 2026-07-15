@@ -46,19 +46,19 @@ export default function Work() {
 
       <div className="shell relative z-10">
         {/* Section Header */}
-        <Reveal className="mb-6 sm:mb-8 flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
-          <div className="flex items-center gap-4">
+        <Reveal className="mb-6 sm:mb-8 flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex flex-wrap items-center gap-2 sm:gap-4">
             <span className="font-mono text-xs sm:text-sm font-semibold uppercase tracking-wider text-reel">
               02 — Selected Work
             </span>
-            <span className="h-px w-12 bg-ivory/15" />
-            <span className="font-mono text-xs uppercase tracking-wider text-ivory/40">
+            <span className="hidden xs:inline-block h-px w-8 sm:w-12 bg-ivory/15" />
+            <span className="font-mono text-[0.68rem] sm:text-xs uppercase tracking-wider text-ivory/40">
               {String(projects.length).padStart(2, "0")} Projects
             </span>
           </div>
 
           {/* Format Filter Tabs */}
-          <div className="flex items-center gap-1 rounded-full border border-ivory/10 bg-black/40 p-1 backdrop-blur-md self-start sm:self-auto">
+          <div className="flex flex-wrap items-center gap-1 rounded-full border border-ivory/10 bg-black/40 p-1 backdrop-blur-md self-start sm:self-auto">
             {formats.map((fmt) => (
               <button
                 key={fmt}

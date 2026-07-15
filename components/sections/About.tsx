@@ -15,7 +15,17 @@ export default function About() {
           <span className="h-px flex-1 bg-graphite/15" />
         </Reveal>
 
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-16">
+        <div className="flex flex-col lg:grid lg:grid-cols-12 lg:gap-16">
+          {/* Mobile-only heading */}
+          <div className="lg:hidden mb-8">
+            <h2 className="text-display font-display font-light text-graphite">
+              <RevealLines
+                lines={["The editor behind", "the emotion."]}
+                lineClassName="block"
+              />
+            </h2>
+          </div>
+
           {/* Sticky portrait */}
           <div className="lg:col-span-5">
             <div className="lg:sticky lg:top-28">
@@ -45,15 +55,16 @@ export default function About() {
           </div>
 
           {/* Editorial text */}
-          <div className="lg:col-span-7">
-            <h2 className="text-display font-display font-light text-graphite">
+          <div className="lg:col-span-7 mt-8 lg:mt-0">
+            {/* Desktop-only heading */}
+            <h2 className="hidden lg:block text-display font-display font-light text-graphite">
               <RevealLines
                 lines={["The editor behind", "the emotion."]}
                 lineClassName="block"
               />
             </h2>
 
-            <div className="mt-10 max-w-xl space-y-6 text-lg leading-relaxed text-graphite/80">
+            <div className="mt-4 lg:mt-10 max-w-xl space-y-6 text-base sm:text-lg leading-relaxed text-graphite/85">
               {profile.bioLong.map((para, i) => (
                 <Reveal as="p" key={i} delay={i}>
                   {para}
