@@ -33,7 +33,7 @@ export default function Work() {
   return (
     <section
       id="work"
-      className="relative bg-graphite py-16 text-ivory sm:py-24 lg:py-32"
+      className="relative bg-graphite py-10 text-ivory sm:py-16 lg:py-20"
     >
       {/* Subtle ambient glow */}
       <div
@@ -46,13 +46,13 @@ export default function Work() {
 
       <div className="shell relative z-10">
         {/* Section Header */}
-        <Reveal className="mb-10 flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
+        <Reveal className="mb-6 sm:mb-8 flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
           <div className="flex items-center gap-4">
-            <span className="font-mono text-[0.68rem] uppercase tracking-label text-reel">
+            <span className="font-mono text-xs sm:text-sm font-semibold uppercase tracking-wider text-reel">
               02 — Selected Work
             </span>
             <span className="h-px w-12 bg-ivory/15" />
-            <span className="font-mono text-[0.68rem] uppercase tracking-label text-ivory/40">
+            <span className="font-mono text-xs uppercase tracking-wider text-ivory/40">
               {String(projects.length).padStart(2, "0")} Projects
             </span>
           </div>
@@ -101,6 +101,7 @@ export default function Work() {
                         src={project.cover}
                         alt={`${project.title} poster frame`}
                         fill
+                        unoptimized
                         sizes="96px"
                         className="object-contain p-0.5"
                       />

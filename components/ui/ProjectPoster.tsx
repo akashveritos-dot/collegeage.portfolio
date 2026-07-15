@@ -21,6 +21,7 @@ export default function ProjectPoster({
         src={project.cover}
         alt={`Still from ${project.title} (${project.year}) — edited by Rakesh Lal Das`}
         fill
+        unoptimized
         priority={priority}
         sizes={sizes}
         className="object-contain bg-black/90 p-1"

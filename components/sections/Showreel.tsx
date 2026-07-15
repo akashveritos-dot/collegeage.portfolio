@@ -9,15 +9,15 @@ export default function Showreel() {
   const [isPlaying, setIsPlaying] = useState(false);
 
   return (
-    <section id="reel" className="relative bg-graphite py-16 text-ivory sm:py-24 lg:py-32">
+    <section id="reel" className="relative bg-graphite py-10 text-ivory sm:py-16 lg:py-20">
       <div className="shell">
         {/* Section header */}
-        <Reveal className="mb-14 flex items-center gap-4">
-          <span className="font-mono text-[0.68rem] uppercase tracking-label text-reel">
+        <Reveal className="mb-6 sm:mb-8 flex items-center gap-4">
+          <span className="font-mono text-xs sm:text-sm font-semibold uppercase tracking-wider text-reel">
             03 — Showreel
           </span>
           <span className="h-px flex-1 bg-ivory/15" />
-          <span className="font-mono text-[0.68rem] uppercase tracking-label text-ivory/40">
+          <span className="font-mono text-xs uppercase tracking-wider text-ivory/40">
             Featured Cut
           </span>
         </Reveal>

@@ -9,12 +9,14 @@ const timeline = [...projects].sort((a, b) => b.year - a.year);
 
 export default function Credits() {
   return (
-    <section id="credits" className="relative bg-ivory py-16 sm:py-24 lg:py-32">
+    <section id="credits" className="relative bg-ivory py-10 sm:py-16 lg:py-20">
       <div className="shell">
-        <Reveal className="mb-14 flex items-center gap-4">
-          <span className="label">05 — Credits</span>
+        <Reveal className="mb-6 sm:mb-8 flex items-center gap-4">
+          <span className="font-mono text-xs sm:text-sm font-semibold uppercase tracking-wider text-reel">
+            04 — Credits
+          </span>
           <span className="h-px flex-1 bg-graphite/15" />
-          <span className="font-mono text-[0.68rem] uppercase tracking-label text-graphite/40">
+          <span className="font-mono text-xs uppercase tracking-wider text-graphite/40">
             Full Production Chronology ({projects.length} Titles)
           </span>
         </Reveal>

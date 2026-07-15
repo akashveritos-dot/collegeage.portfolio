@@ -59,8 +59,8 @@ export const projects: Project[] = [
     tagline: "Unraveling mystery frame by frame.",
     description:
       "Editorial work for Jagadhatri, crafting high-stakes suspense, subtle drama transitions, and rhythmic scene cuts for this ongoing series.",
-    cover: "/images/projects/jagadhatri.png",
-    gallery: ["/images/projects/jagadhatri.png"],
+    cover: "/images/projects/jagadhatri.png?v=3",
+    gallery: ["/images/projects/jagadhatri.png?v=3"],
     credits: [
       { label: "Role", value: "Editor" },
       { label: "Format", value: "TV Series" },
@@ -81,8 +81,8 @@ export const projects: Project[] = [
     tagline: "Dramatic storytelling with emotional resonance.",
     description:
       "Lead editorial rhythm for Saru, balancing dramatic tension, character arcs, and high-volume episode assembly.",
-    cover: "/images/projects/saru.png",
-    gallery: ["/images/projects/saru.png"],
+    cover: "/images/projects/saru.png?v=3",
+    gallery: ["/images/projects/saru.png?v=3"],
     credits: [
       { label: "Role", value: "Editor" },
       { label: "Format", value: "TV Series" },
@@ -103,8 +103,8 @@ export const projects: Project[] = [
     tagline: "A multi-year saga of family, sacrifice, and resilience.",
     description:
       "Key editorial contributor to Imlie across 1,126 episodes from 2020 to 2024, shaping one of Indian television's longest-running prime-time dramas.",
-    cover: "/images/projects/imlie.png",
-    gallery: ["/images/projects/imlie.png"],
+    cover: "/images/projects/imlie.png?v=3",
+    gallery: ["/images/projects/imlie.png?v=3"],
     credits: [
       { label: "Role", value: "Editor" },
       { label: "Format", value: "TV Series" },
@@ -125,10 +125,10 @@ export const projects: Project[] = [
     tagline: "Tension held at altitude.",
     description:
       "Crafted precise suspense and rhythmic pacing across episodes of the dark comedy-thriller series Flight Attendant, keeping viewers on the edge of their seats.",
-    cover: "/images/projects/flight-attendant.jpg",
+    cover: "/images/projects/flight-attendant.jpg?v=3",
     gallery: [
-      "/images/flight-attendant-still.jpg",
-      "/images/projects/flight-attendant.jpg",
+      "/images/flight-attendant-still.jpg?v=3",
+      "/images/projects/flight-attendant.jpg?v=3",
     ],
     credits: [
       { label: "Role", value: "Editor" },
@@ -150,8 +150,8 @@ export const projects: Project[] = [
     tagline: "High-octane action & magical visual timing.",
     description:
       "Editorial cut for Baalveer 4, synchronizing visual effects timing, fantasy action sequences, and dynamic sound cues.",
-    cover: "/images/projects/baalveer-4.png",
-    gallery: ["/images/projects/baalveer-4.png"],
+    cover: "/images/projects/baalveer-4.png?v=3",
+    gallery: ["/images/projects/baalveer-4.png?v=3"],
     credits: [
       { label: "Role", value: "Editor" },
       { label: "Format", value: "TV Series" },
@@ -172,10 +172,10 @@ export const projects: Project[] = [
     tagline: "Modern romance and sharp emotional beats.",
     description:
       "Edited episodes of Dear Ishq, weaving intimate relationship drama, rapid dialogue pacing, and stylish urban scene transitions.",
-    cover: "/images/projects/dear-ishq.jpg",
+    cover: "/images/projects/dear-ishq.jpg?v=3",
     gallery: [
-      "/images/projects/dear-ishq.jpg",
-      "/images/projects/dear-ishq.png",
+      "/images/projects/dear-ishq.jpg?v=3",
+      "/images/projects/dear-ishq.png?v=3",
     ],
     credits: [
       { label: "Role", value: "Editor" },
@@ -197,10 +197,10 @@ export const projects: Project[] = [
     tagline: "Everyday lives, precisely paced.",
     description:
       "Editorial lead for Faltu (2022–2023), shaping dramatic flow, pacing, and emotional high-points across 269 episodes.",
-    cover: "/images/projects/faltu.jpg",
+    cover: "/images/projects/faltu.jpg?v=3",
     gallery: [
-      "/images/faltu-still.jpg",
-      "/images/projects/faltu.jpg",
+      "/images/faltu-still.jpg?v=3",
+      "/images/projects/faltu.jpg?v=3",
     ],
     credits: [
       { label: "Role", value: "Editor" },
@@ -222,8 +222,8 @@ export const projects: Project[] = [
     tagline: "Overcoming odds in raw narrative detail.",
     description:
       "Edited the compelling short film I Am Not Down, focusing on raw performance cuts, atmospheric silence, and emotional weight.",
-    cover: "/images/projects/i-am-not-down.png",
-    gallery: ["/images/projects/i-am-not-down.png"],
+    cover: "/images/projects/i-am-not-down.png?v=3",
+    gallery: ["/images/projects/i-am-not-down.png?v=3"],
     credits: [
       { label: "Role", value: "Editor" },
       { label: "Format", value: "Short Film" },
@@ -241,8 +241,8 @@ export const projects: Project[] = [
     tagline: "Heroic fantasy and dynamic action cuts.",
     description:
       "Edited fantasy adventure episodes for Baalveer 3, structuring visual effects sequences and fast-paced superhero narrative beats.",
-    cover: "/images/projects/baalveer-3.png",
-    gallery: ["/images/projects/baalveer-3.png"],
+    cover: "/images/projects/baalveer-3.png?v=3",
+    gallery: ["/images/projects/baalveer-3.png?v=3"],
     credits: [
       { label: "Role", value: "Editor" },
       { label: "Format", value: "TV Series" },
@@ -263,8 +263,8 @@ export const projects: Project[] = [
     tagline: "High chemistry, intense emotional rhythm.",
     description:
       "Edited 113 episodes of Ishk Par Zor Nahin (2021), delivering sharp comedic timing alongside passionate romantic climaxes.",
-    cover: "/images/projects/ishk-par-zor-nahin.png",
-    gallery: ["/images/projects/ishk-par-zor-nahin.png"],
+    cover: "/images/projects/ishk-par-zor-nahin.png?v=3",
+    gallery: ["/images/projects/ishk-par-zor-nahin.png?v=3"],
     credits: [
       { label: "Role", value: "Editor" },
       { label: "Format", value: "TV Series" },
@@ -285,8 +285,8 @@ export const projects: Project[] = [
     tagline: "Dance, passion, and societal collision.",
     description:
       "Lead editor for 53 episodes of Namak Issk Ka (2020–2021), synchronizing high-energy dance numbers and dramatic confrontations.",
-    cover: "/images/projects/namak-issk-ka.png",
-    gallery: ["/images/projects/namak-issk-ka.png"],
+    cover: "/images/projects/namak-issk-ka.png?v=3",
+    gallery: ["/images/projects/namak-issk-ka.png?v=3"],
     credits: [
       { label: "Role", value: "Editor" },
       { label: "Format", value: "TV Series" },
@@ -307,10 +307,10 @@ export const projects: Project[] = [
     tagline: "Suspense cut close.",
     description:
       "Edited 409 episodes of Nazar (2018–2020), weaving supernatural elements, fast-paced action sequences, and high-tension cliffhangers.",
-    cover: "/images/projects/nazar.jpg",
+    cover: "/images/projects/nazar.jpg?v=3",
     gallery: [
-      "/images/nazar-still.jpg",
-      "/images/projects/nazar.jpg",
+      "/images/nazar-still.jpg?v=3",
+      "/images/projects/nazar.jpg?v=3",
     ],
     credits: [
       { label: "Role", value: "Editor" },
