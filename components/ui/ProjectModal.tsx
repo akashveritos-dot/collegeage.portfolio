@@ -137,6 +137,7 @@ export default function ProjectModal({
                     src={src}
                     alt={`${project.title} still ${i + 1}`}
                     fill
+                    unoptimized
                     sizes="(max-width: 768px) 50vw, 300px"
                     className="object-cover"
                   />
