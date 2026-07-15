@@ -106,33 +106,6 @@ export default function Hero() {
               Get in Touch
             </a>
           </motion.div>
-
-          {/* selected credits strip — desktop only */}
-          <motion.dl
-            className="mt-12 hidden flex-wrap gap-x-10 gap-y-4 border-t border-graphite/15 pt-6 lg:flex"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1.2, duration: 0.8 }}
-          >
-            <div>
-              <dt className="font-mono text-[0.62rem] uppercase tracking-label text-graphite/45">
-                Selected Credits
-              </dt>
-              <dd className="mt-1 font-mono text-sm text-graphite">
-                {years[0]} — {years[years.length - 1]}
-              </dd>
-            </div>
-            {projects.slice(0, 5).map((p) => (
-              <div key={p.slug}>
-                <dt className="font-mono text-[0.62rem] uppercase tracking-label text-graphite/45">
-                  {p.year}
-                </dt>
-                <dd className="mt-1 font-display text-sm text-graphite">
-                  {p.title}
-                </dd>
-              </div>
-            ))}
-          </motion.dl>
         </div>
       </div>
 

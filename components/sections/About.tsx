@@ -70,23 +70,8 @@ export default function About() {
               </p>
             </Reveal>
 
-            {/* Known works + optional meta */}
+            {/* Optional meta */}
             <div className="mt-12 grid grid-cols-2 gap-x-8 gap-y-8 sm:grid-cols-3">
-              <div className="col-span-2 sm:col-span-3">
-                <p className="font-mono text-[0.62rem] uppercase tracking-label text-graphite/45">
-                  Known For
-                </p>
-                <ul className="mt-3 flex flex-wrap gap-x-6 gap-y-2">
-                  {projects.map((p) => (
-                    <li key={p.slug} className="font-display text-xl text-graphite">
-                      {p.title}{" "}
-                      <span className="font-mono text-sm text-graphite/40">
-                        {p.year}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
 
               {profile.location && (
                 <div>
