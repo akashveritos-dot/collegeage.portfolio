@@ -122,7 +122,7 @@ export default function Hero() {
                 {years[0]} — {years[years.length - 1]}
               </dd>
             </div>
-            {projects.map((p) => (
+            {projects.slice(0, 5).map((p) => (
               <div key={p.slug}>
                 <dt className="font-mono text-[0.62rem] uppercase tracking-label text-graphite/45">
                   {p.year}
