@@ -365,11 +365,8 @@ export const capabilities: Capability[] = [
 ];
 
 export const socials: SocialLink[] = [
-  { label: "IMDb", href: "https://www.imdb.com/name/nm12607916/", icon: "film" }, // verified IMDb URL
-  { label: "LinkedIn", href: null, icon: "linkedin" }, // TODO
-  { label: "Instagram", href: null, icon: "instagram" }, // TODO
-  { label: "YouTube", href: null, icon: "youtube" }, // TODO
-  { label: "Vimeo", href: null, icon: "vimeo" }, // TODO
+  { label: "IMDb", href: "https://www.imdb.com/name/nm12607916/", icon: "film" },
+  { label: "Instagram", href: "https://www.instagram.com/", icon: "instagram" },
 ];
 
 export const site = {

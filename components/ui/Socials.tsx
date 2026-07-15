@@ -1,29 +1,19 @@
 "use client";
 
-import { Film, Linkedin, Instagram, Youtube, Video, Mail, Link2 } from "lucide-react";
+import { Film, Instagram, Mail, Link2 } from "lucide-react";
 import { socials, profile } from "@/data/site";
 
 const iconMap: Record<string, React.ElementType> = {
   film: Film,
-  linkedin: Linkedin,
   instagram: Instagram,
-  youtube: Youtube,
-  vimeo: Video,
   mail: Mail,
 };
 
-/**
- * Social links. Entries with a real href render as external links; entries
- * still awaiting a verified URL render as non-interactive, clearly-labelled
- * placeholders (never a fake link). Email is appended when provided.
- */
 export default function Socials({ tone = "light" }: { tone?: "light" | "dark" }) {
   const base =
     tone === "dark"
       ? "border-ivory/20 text-ivory/80 hover:border-reel hover:text-ivory"
       : "border-graphite/20 text-graphite/80 hover:border-reel hover:text-graphite";
-  const muted =
-    tone === "dark" ? "border-ivory/10 text-ivory/30" : "border-graphite/10 text-graphite/30";
 
   const items = [
     ...socials,
@@ -33,33 +23,56 @@ export default function Socials({ tone = "light" }: { tone?: "light" | "dark" })
   ];
 
   return (
-    <ul className="flex flex-wrap gap-2.5">
+    <ul className="flex flex-wrap gap-3">
       {items.map((s) => {
         const Icon = iconMap[s.icon] ?? Link2;
-        if (!s.href) {
+        const isInstagram = s.icon === "instagram";
+        const isIMDb = s.icon === "film";
+
+        if (!s.href) return null;
+
+        if (isInstagram) {
           return (
             <li key={s.label}>
-              <span
-                className={`inline-flex cursor-default items-center gap-2 rounded-full border px-4 py-2 font-mono text-[0.7rem] uppercase tracking-label ${muted}`}
-                title={`${s.label} — link coming soon`}
+              <a
+                href={s.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={s.label}
+                className="inline-flex items-center gap-2 rounded-full bg-gradient-to-tr from-amber-500 via-rose-500 to-purple-600 px-4 py-2 font-mono text-[0.7rem] uppercase tracking-label font-bold text-white shadow-lg shadow-rose-500/20 transition-all duration-300 hover:scale-105 hover:shadow-rose-500/40"
               >
-                <Icon size={14} aria-hidden />
+                <Icon size={15} aria-hidden />
                 {s.label}
-                <span className="sr-only"> (link coming soon)</span>
-              </span>
+              </a>
             </li>
           );
         }
-        const external = s.href.startsWith("http");
+
+        if (isIMDb) {
+          return (
+            <li key={s.label}>
+              <a
+                href={s.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={s.label}
+                className="inline-flex items-center gap-2 rounded-full border border-[#f5c518] bg-[#f5c518] px-4 py-2 font-mono text-[0.7rem] uppercase tracking-label font-bold text-black shadow-lg shadow-amber-500/20 transition-all duration-300 hover:scale-105 hover:bg-[#e2bd02]"
+              >
+                <Icon size={15} aria-hidden />
+                {s.label}
+              </a>
+            </li>
+          );
+        }
+
         return (
           <li key={s.label}>
             <a
               href={s.href}
-              {...(external
-                ? { target: "_blank", rel: "noopener noreferrer" }
-                : {})}
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label={s.label}
-              className={`inline-flex items-center gap-2 rounded-full border px-4 py-2 font-mono text-[0.7rem] uppercase tracking-label transition-colors ${base}`}
+              className={`inline-flex items-center gap-2 rounded-full border px-4 py-2 font-mono text-[0.7rem] uppercase tracking-label transition-all duration-300 hover:scale-105 ${base}`}
             >
               <Icon size={14} aria-hidden />
               {s.label}
@@ -70,3 +83,4 @@ export default function Socials({ tone = "light" }: { tone?: "light" | "dark" })
     </ul>
   );
 }
+
