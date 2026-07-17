@@ -94,6 +94,26 @@ export default function RootLayout({
       lang="en"
       className={`${display.variable} ${sans.variable} ${mono.variable}`}
     >
+      <head>
+        <style
+          dangerouslySetInnerHTML={{
+            __html: `
+              html, body {
+                overflow-x: hidden !important;
+                max-width: 100vw;
+                width: 100%;
+              }
+              .no-scrollbar::-webkit-scrollbar {
+                display: none !important;
+              }
+              .no-scrollbar {
+                -ms-overflow-style: none !important;
+                scrollbar-width: none !important;
+              }
+            `
+          }}
+        />
+      </head>
       <body className="grain antialiased" suppressHydrationWarning>
         <script
           dangerouslySetInnerHTML={{
