@@ -20,8 +20,10 @@ export default function Philosophy() {
 
   useEffect(() => {
     if (reduced || !strip.current) return;
-    const ctx = gsap.context(() => {
-      // Parallax the filmstrip horizontally as the section scrolls through view.
+    const mm = gsap.matchMedia(root);
+
+    mm.add("(min-width: 1024px)", () => {
+      // Parallax the filmstrip horizontally as the section scrolls through view (desktop only).
       gsap.fromTo(
         strip.current,
         { xPercent: 6 },
@@ -36,8 +38,9 @@ export default function Philosophy() {
           },
         }
       );
-    }, root);
-    return () => ctx.revert();
+    });
+
+    return () => mm.revert();
   }, [reduced]);
 
   return (
@@ -66,23 +69,23 @@ export default function Philosophy() {
       </div>
 
       {/* Scroll-parallax filmstrip of beats */}
-      <div className="mt-16 overflow-hidden pointer-events-none" aria-hidden>
+      <div className="mt-8 sm:mt-16 overflow-x-auto no-scrollbar pointer-events-auto lg:overflow-hidden lg:pointer-events-none" aria-hidden>
         <div
           ref={strip}
-          className="flex w-max gap-4 will-change-transform"
+          className="flex w-max gap-4 will-change-transform px-4 sm:px-8 lg:px-0"
         >
-          {[...beats, ...beats].map((b, i) => (
+          {beats.map((b, i) => (
             <div
               key={i}
-              className="flex h-56 w-72 shrink-0 flex-col justify-between border border-graphite/15 bg-graphite p-5 text-ivory sm:w-80"
+              className="flex h-44 w-60 shrink-0 flex-col justify-between border border-graphite/15 bg-graphite p-4 text-ivory sm:h-56 sm:w-80 sm:p-5"
             >
               <div className="flex justify-between font-mono text-[0.58rem] uppercase tracking-label text-ivory/40">
-                <span>Frame {String((i % beats.length) + 1).padStart(3, "0")}</span>
+                <span>Frame {String(i + 1).padStart(3, "0")}</span>
                 <span className="text-reel">●</span>
               </div>
               <div>
-                <p className="font-display text-3xl font-light">{b.k}</p>
-                <p className="mt-2 text-sm leading-snug text-ivory/60">{b.v}</p>
+                <p className="font-display text-2xl sm:text-3xl font-light">{b.k}</p>
+                <p className="mt-2 text-xs sm:text-sm leading-snug text-ivory/60">{b.v}</p>
               </div>
             </div>
           ))}
