@@ -17,7 +17,7 @@ export default function About() {
 
         <div className="flex flex-col lg:grid lg:grid-cols-12 lg:gap-16">
           {/* Mobile-only heading */}
-          <div className="lg:hidden mb-2 order-1">
+          <div className="lg:hidden mb-1 order-1">
             <h2 className="text-display font-display font-light text-graphite">
               <RevealLines
                 lines={["The editor behind", "the emotion."]}
