@@ -17,7 +17,7 @@ export default function About() {
 
         <div className="flex flex-col lg:grid lg:grid-cols-12 lg:gap-16">
           {/* Mobile-only heading */}
-          <div className="lg:hidden mb-4 order-1">
+          <div className="lg:hidden mb-2 order-1">
             <h2 className="text-display font-display font-light text-graphite">
               <RevealLines
                 lines={["The editor behind", "the emotion."]}
@@ -64,7 +64,7 @@ export default function About() {
               />
             </h2>
 
-            <div className="mt-4 lg:mt-10 max-w-xl space-y-6 text-base sm:text-lg leading-relaxed text-graphite/85">
+            <div className="mt-2 lg:mt-10 max-w-xl space-y-6 text-base sm:text-lg leading-relaxed text-graphite/85">
               {profile.bioLong.map((para, i) => (
                 <Reveal as="p" key={i} delay={i}>
                   {para}
