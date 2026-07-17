@@ -122,7 +122,11 @@ export default function RootLayout({
         >
           Skip to content
         </a>
-        <SmoothScroll>{children}</SmoothScroll>
+        <SmoothScroll>
+          <div className="relative w-full overflow-x-hidden">
+            {children}
+          </div>
+        </SmoothScroll>
       </body>
     </html>
   );

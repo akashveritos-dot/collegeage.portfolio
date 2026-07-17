@@ -66,7 +66,7 @@ export default function Philosophy() {
       </div>
 
       {/* Scroll-parallax filmstrip of beats */}
-      <div className="mt-16 overflow-hidden" aria-hidden>
+      <div className="mt-16 overflow-hidden pointer-events-none" aria-hidden>
         <div
           ref={strip}
           className="flex w-max gap-4 will-change-transform"

@@ -8,7 +8,7 @@ export default function About() {
   return (
     <section id="about" className="relative overflow-hidden w-full max-w-full bg-ivory py-8 sm:py-16 lg:py-20">
       <div className="shell">
-        <Reveal className="mb-4 sm:mb-8 flex items-center gap-4">
+        <Reveal className="mb-2 sm:mb-8 flex items-center gap-4">
           <span className="font-mono text-xs sm:text-sm font-semibold uppercase tracking-wider text-reel">
             01 — About
           </span>
@@ -17,7 +17,7 @@ export default function About() {
 
         <div className="flex flex-col lg:grid lg:grid-cols-12 lg:gap-16">
           {/* Mobile-only heading */}
-          <div className="lg:hidden mb-6 order-1">
+          <div className="lg:hidden mb-4 order-1">
             <h2 className="text-display font-display font-light text-graphite">
               <RevealLines
                 lines={["The editor behind", "the emotion."]}
