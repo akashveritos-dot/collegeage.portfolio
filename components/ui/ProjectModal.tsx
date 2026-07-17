@@ -23,6 +23,7 @@ export default function ProjectModal({
 
   useEffect(() => {
     document.body.style.overflow = "hidden";
+    document.documentElement.style.overflow = "hidden";
     closeRef.current?.focus();
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
@@ -47,6 +48,7 @@ export default function ProjectModal({
     document.addEventListener("keydown", onKey);
     return () => {
       document.body.style.overflow = "";
+      document.documentElement.style.overflow = "";
       document.removeEventListener("keydown", onKey);
     };
   }, [onClose, onPrev, onNext]);

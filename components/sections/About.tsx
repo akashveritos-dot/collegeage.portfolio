@@ -27,7 +27,7 @@ export default function About() {
           </div>
 
           {/* Sticky portrait */}
-          <div className="lg:col-span-5 order-3 lg:order-none mt-12 lg:mt-0">
+          <div className="lg:col-span-5 order-3 lg:order-none mt-6 lg:mt-0">
             <div className="lg:sticky lg:top-28">
               {/* Cutout portrait — no box, standing directly on the ground line */}
               <div className="relative aspect-[4/5] w-full">
@@ -47,9 +47,9 @@ export default function About() {
                   className="absolute z-[1] object-contain object-bottom drop-shadow-[0_18px_28px_rgba(22,19,15,0.22)]"
                 />
               </div>
-              <div className="mt-4 flex items-center justify-between border-t border-graphite/15 pt-4 font-mono text-[0.62rem] uppercase tracking-label text-graphite/45">
-                <span>Contact Sheet · {profile.name}</span>
-                <span>Frame 02 / 24</span>
+              <div className="mt-4 flex items-center justify-between border-t border-graphite/15 pt-4 font-mono text-[0.58rem] xs:text-[0.62rem] uppercase tracking-wider xs:tracking-label text-graphite/45">
+                <span className="whitespace-nowrap">Contact Sheet · {profile.name}</span>
+                <span className="whitespace-nowrap">Frame 02 / 24</span>
               </div>
             </div>
           </div>
@@ -84,14 +84,14 @@ export default function About() {
             </Reveal>
 
             {/* Optional meta */}
-            <div className="mt-12 grid grid-cols-2 gap-x-8 gap-y-8 sm:grid-cols-3">
+            <div className="mt-6 grid grid-cols-1 gap-y-4 sm:grid-cols-3">
 
               {profile.location && (
                 <div>
                   <p className="font-mono text-[0.62rem] uppercase tracking-label text-graphite/45">
                     Based In
                   </p>
-                  <p className="mt-2 text-graphite">{profile.location}</p>
+                  <p className="mt-1 text-graphite">{profile.location}</p>
                 </div>
               )}
               {profile.availability && (
@@ -99,7 +99,7 @@ export default function About() {
                   <p className="font-mono text-[0.62rem] uppercase tracking-label text-graphite/45">
                     Availability
                   </p>
-                  <p className="mt-2 text-graphite">{profile.availability}</p>
+                  <p className="mt-1 text-graphite whitespace-nowrap">{profile.availability}</p>
                 </div>
               )}
             </div>
