@@ -53,7 +53,7 @@ export default function ProjectModal({
 
   return (
     <motion.div
-      className="fixed inset-0 z-[95] flex justify-end bg-graphite/70 backdrop-blur-sm"
+      className="fixed inset-0 z-[95] flex justify-end bg-graphite/70 backdrop-blur-sm overflow-y-auto no-scrollbar"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
@@ -64,7 +64,7 @@ export default function ProjectModal({
         role="dialog"
         aria-modal="true"
         aria-labelledby="modal-title"
-        className="relative h-full w-full max-w-2xl overflow-y-auto bg-ivory"
+        className="relative min-h-screen w-full max-w-2xl bg-ivory"
         initial={{ x: "100%" }}
         animate={{ x: 0 }}
         exit={{ x: "100%" }}

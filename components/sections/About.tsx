@@ -6,9 +6,9 @@ import { Reveal, RevealLines } from "@/components/motion/Reveal";
 
 export default function About() {
   return (
-    <section id="about" className="relative overflow-hidden w-full max-w-full bg-ivory py-10 sm:py-16 lg:py-20">
+    <section id="about" className="relative overflow-hidden w-full max-w-full bg-ivory py-8 sm:py-16 lg:py-20">
       <div className="shell">
-        <Reveal className="mb-6 sm:mb-8 flex items-center gap-4">
+        <Reveal className="mb-4 sm:mb-8 flex items-center gap-4">
           <span className="font-mono text-xs sm:text-sm font-semibold uppercase tracking-wider text-reel">
             01 — About
           </span>
@@ -17,7 +17,7 @@ export default function About() {
 
         <div className="flex flex-col lg:grid lg:grid-cols-12 lg:gap-16">
           {/* Mobile-only heading */}
-          <div className="lg:hidden mb-8">
+          <div className="lg:hidden mb-6 order-1">
             <h2 className="text-display font-display font-light text-graphite">
               <RevealLines
                 lines={["The editor behind", "the emotion."]}
@@ -27,7 +27,7 @@ export default function About() {
           </div>
 
           {/* Sticky portrait */}
-          <div className="lg:col-span-5">
+          <div className="lg:col-span-5 order-3 lg:order-none mt-12 lg:mt-0">
             <div className="lg:sticky lg:top-28">
               {/* Cutout portrait — no box, standing directly on the ground line */}
               <div className="relative aspect-[4/5] w-full">
@@ -55,7 +55,7 @@ export default function About() {
           </div>
 
           {/* Editorial text */}
-          <div className="lg:col-span-7 mt-8 lg:mt-0">
+          <div className="lg:col-span-7 mt-0 lg:mt-0 order-2 lg:order-none">
             {/* Desktop-only heading */}
             <h2 className="hidden lg:block text-display font-display font-light text-graphite">
               <RevealLines

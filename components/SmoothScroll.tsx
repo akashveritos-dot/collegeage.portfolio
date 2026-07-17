@@ -17,7 +17,7 @@ export default function SmoothScroll({
   const reduced = useReducedMotion();
 
   useEffect(() => {
-    if (reduced) return;
+    if (reduced || (typeof window !== "undefined" && window.innerWidth < 1024)) return;
 
     const lenis = new Lenis({
       duration: 1.1,

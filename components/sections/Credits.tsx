@@ -9,9 +9,9 @@ const timeline = [...projects].sort((a, b) => b.year - a.year);
 
 export default function Credits() {
   return (
-    <section id="credits" className="relative overflow-hidden w-full max-w-full bg-ivory py-10 sm:py-16 lg:py-20">
+    <section id="credits" className="relative overflow-hidden w-full max-w-full bg-ivory py-8 sm:py-16 lg:py-20">
       <div className="shell">
-        <Reveal className="mb-6 sm:mb-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+        <Reveal className="mb-4 sm:mb-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <div className="flex flex-wrap items-center gap-2 sm:gap-4">
             <span className="font-mono text-xs sm:text-sm font-semibold uppercase tracking-wider text-reel">
               04 — Credits

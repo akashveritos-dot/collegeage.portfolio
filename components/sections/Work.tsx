@@ -33,7 +33,7 @@ export default function Work() {
   return (
     <section
       id="work"
-      className="relative overflow-hidden w-full max-w-full bg-graphite py-10 text-ivory sm:py-16 lg:py-20"
+      className="relative overflow-hidden w-full max-w-full bg-graphite py-8 text-ivory sm:py-16 lg:py-20"
     >
       {/* Subtle ambient glow */}
       <div
@@ -46,7 +46,7 @@ export default function Work() {
 
       <div className="shell relative z-10">
         {/* Section Header */}
-        <Reveal className="mb-6 sm:mb-8 flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
+        <Reveal className="mb-4 sm:mb-8 flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
           <div className="flex flex-wrap items-center gap-2 sm:gap-4">
             <span className="font-mono text-xs sm:text-sm font-semibold uppercase tracking-wider text-reel">
               02 — Selected Work

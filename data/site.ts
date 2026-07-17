@@ -365,7 +365,7 @@ export const capabilities: Capability[] = [
 
 export const socials: SocialLink[] = [
   { label: "IMDb", href: "https://www.imdb.com/name/nm12607916/", icon: "film" },
-  { label: "Instagram", href: "https://www.instagram.com/", icon: "instagram" },
+  { label: "Instagram", href: "https://www.instagram.com/editor_rakeshlal?utm_source=qr", icon: "instagram" },
 ];
 
 export const site = {
